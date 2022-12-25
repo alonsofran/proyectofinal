@@ -1,0 +1,18 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> Resultado busqueda de productos </h1>
+
+{% endblock %}
+
+{% block contenido_que_cambia%}
+<h2> LISTADO DE PRODUCTOS </h2>
+    {% for p in productos%}
+
+    <h3> {{ p.nombre }} - {{ p.marca }} - {{ p.precio }}</h3>
+
+    {% endfor %}
+
+{% endblock %}

@@ -8,10 +8,11 @@
 {% endblock %}
 
 {% block contenido_que_cambia %}
-<form action="{% url 'productoformulario' %}" method="POST"> {% csrf_token %}
-    <p> Nombre del producto <input type="text" name="nombre"></p>
-    <p> Marca del producto <input type="text" name="marca"> </p>
-    <p> Precio del producto <input type="number" name="precio"> </p>
-    <input type="sumbit" value="Guardar Producto">
+<form action="{% url 'productosformulario' %}" method="POST">{% csrf_token %}
+    <p> nombre: <input type="text" name="nombre"></p>
+    <p> marca: <input type="text" name="marca"> </p>
+    <p> precio: <input type="number" name="precio"> </p>
+    <input type="submit" value="Cargar">
+
 </form>
 {% endblock %}

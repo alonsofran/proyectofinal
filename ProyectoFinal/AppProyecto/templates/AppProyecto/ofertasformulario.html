@@ -1,0 +1,20 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> Ofertas</h1>
+
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'ofertasformulario' %}" method="POST">{% csrf_token %}
+    <P> oproducto: <input type="text" name="oproducto"></P>
+    <p> onombre: <input type="text" name="onombre"></p>
+    <p> omarca: <input type="text" name="omarca"> </p>
+    <p> oprecio_oferta: <input type="number" name="oprecio_oferta"> </p>
+    <input type="submit" value="Cargar">
+
+</form>
+{% endblock %}
